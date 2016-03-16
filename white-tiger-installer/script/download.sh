@@ -94,7 +94,7 @@ if [ $RETVAL -ne 0 ] ; then
 exit 1
 fi
 
-mv download sshpass-1.05.tar.gz
+mv download sshpass-${SSHPASS_VER}.tar.gz
 
 wget $SPARK_DOWN_URL
 RETVAL=$?
@@ -111,6 +111,60 @@ datetime=`date +'%Y-%m-%d %H:%M:%S'`
 if [ $RETVAL -ne 0 ] ; then
     echo "R download error ( check url )"
     echo "$datetime|$ref_dt|$PRG_NM|Error|$0 R download error ( check url )" >> $LOG_FILE
+exit 1
+fi
+
+gzip -d *.gz
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "gzip error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 gzip error" >> $LOG_FILE
+exit 1
+fi
+
+tar -xvf hadoop-${HADOOP_VER}.tar
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "tar error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
+exit 1
+fi
+
+tar -xvf apache-hive-${HIVE_VER}-bin.tar
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "tar error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
+exit 1
+fi
+
+tar -xvf postgresql-${POSTGRESQL_VER}.tar
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "tar error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
+exit 1
+fi
+
+tar -xvf R-${R_VER}.tar
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "tar error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
+exit 1
+fi
+
+tar -xvzf spark-${SPARK_VER}.tgz
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "tar error"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
 exit 1
 fi
 
