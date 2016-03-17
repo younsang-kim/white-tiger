@@ -54,14 +54,6 @@ fi
 
 cd $INSTALL_PACKAGE_BIN
 
-if [ ! -d "hdfs" ] ; then
-    mkdir -p "hdfs"
-    mkdir -p "hdfs/data"
-    mkdir -p "hdfs/logs"
-    mkdir -p "hdfs/name"
-    mkdir -p "hdfs/temp"
-fi
-
 tar -cvf hadoop-${HADOOP_VER}.tar hadoop-${HADOOP_VER} hdfs
 
 rm -rf  $INSTALL_HOME/hadoop-${HADOOP_VER}.tar $INSTALL_HOME/hadoop-${HADOOP_VER}

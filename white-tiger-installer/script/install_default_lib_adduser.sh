@@ -67,6 +67,8 @@ cd $INSTALL_HADOOP_HOME
 
 tar -xvf sshpass-1.05.tar
 
+rm sshpass-1.05.tar
+
 RETVAL=$?
 if [ $RETVAL -ne 0 ] ; then
   echo "tar error"

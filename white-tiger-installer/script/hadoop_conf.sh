@@ -52,6 +52,13 @@ fi
 #  ENV END    #
 ###############
 
+if [ ! -d "$INSTALL_PACKAGE_BIN/hdfs" ] ; then
+    mkdir -p "$INSTALL_PACKAGE_BIN/hdfs"
+    mkdir -p "$INSTALL_PACKAGE_BIN/hdfs/data"
+    mkdir -p "$INSTALL_PACKAGE_BIN/hdfs/logs"
+    mkdir -p "$INSTALL_PACKAGE_BIN/hdfs/name"
+    mkdir -p "$INSTALL_PACKAGE_BIN/hdfs/temp"
+fi
 
 if [ -f "$INSTALL_PACKAGE_BIN/hadoop-${HADOOP_VER}/etc/hadoop/hadoop-env.sh.bak" ] ; then
   echo "OK file exist"

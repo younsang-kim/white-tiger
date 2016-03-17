@@ -159,12 +159,33 @@ if [ $RETVAL -ne 0 ] ; then
 exit 1
 fi
 
-tar -xvzf spark-${SPARK_VER}.tgz
+tar -xvzf spark-${SPARK_VER}-bin-hadoop2.6.tgz
 RETVAL=$?
 datetime=`date +'%Y-%m-%d %H:%M:%S'`
 if [ $RETVAL -ne 0 ] ; then
     echo "tar error"
     echo "$datetime|$ref_dt|$PRG_NM|Error|$0 tar error" >> $LOG_FILE
+exit 1
+fi
+
+cd $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/lib
+
+wget $POSTGRESQL_JDBC_DOWN_URL
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "postgresql jdbc download error ( check url )"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 postgresql jdbc download error ( check url )" >> $LOG_FILE
+exit 1
+fi
+
+cd $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/lib
+wget $POSTGRESQL_JDBC_DOWN_URL
+RETVAL=$?
+datetime=`date +'%Y-%m-%d %H:%M:%S'`
+if [ $RETVAL -ne 0 ] ; then
+    echo "postgresql jdbc download error ( check url )"
+    echo "$datetime|$ref_dt|$PRG_NM|Error|$0 postgresql jdbc download error ( check url )" >> $LOG_FILE
 exit 1
 fi
 
