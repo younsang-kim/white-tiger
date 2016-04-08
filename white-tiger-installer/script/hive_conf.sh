@@ -2922,4 +2922,7 @@ echo "fi" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/bin/stop.sh
 echo "" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/bin/stop.sh
 echo "exit 0" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/bin/stop.sh
 
+chmod 755 $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/bin/start.sh
+chmod 755 $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/bin/stop.sh
+
 exit 0
