@@ -943,7 +943,7 @@ echo "</property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hiv
 echo "" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "<property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "  <name>hive.mapjoin.smalltable.filesize</name>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
-echo "  <value>${HIVE_VER}000</value>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
+echo "  <value>1000</value>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "  <description>The threshold for the input file size of the small tables; if the file size is smaller than this threshold, it will try to convert the common join into map join</description>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "</property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
@@ -2850,7 +2850,7 @@ echo "  <description></description>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE
 echo "</property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "<property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "  <name>hive.exec.mode.local.auto.input.files.max</name>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
-echo "  <value>${HIVE_VER}0000</value>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
+echo "  <value>10000</value>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "  <description></description>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "</property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
 echo "<property>" >>  $INSTALL_PACKAGE_BIN/apache-hive-${HIVE_VER}-bin/conf/hive-site.xml
