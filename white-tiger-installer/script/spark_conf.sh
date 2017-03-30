@@ -74,7 +74,7 @@ echo "export SPARK_WORKER_MEMORY=$INSTALL_SPARK_WORKER_MEMORY" >> $INSTALL_PACKA
 echo "export SPARK_WORKER_INSTANCES=$INSTALL_SPARK_WORKER_INSTANCES" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export SPARK_WORKER_CORES=$INSTALL_SPARK_WORKER_CORE" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export SPARK_DEAMON_JAVA_OPTS=\"-Xms${INSTALL_SPARK_WORKER_MEMORY} -Xmx${INSTALL_SPARK_WORKER_MEMORY}\"" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
-echo "export SPARK_JAVA_OPTS=\"-Xms${INSTALL_SPARK_WORKER_MEMORY} -Xmx${INSTALL_SPARK_WORKER_MEMORY} -Dspark.kryoserializer.buffer.mb=10 -Dspark.cleaner.ttl=43200\"" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
+echo "#export SPARK_JAVA_OPTS=\"-Xms${INSTALL_SPARK_WORKER_MEMORY} -Xmx${INSTALL_SPARK_WORKER_MEMORY} -Dspark.kryoserializer.buffer.mb=10 -Dspark.cleaner.ttl=43200\"" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 
 echo "spark.master=spark://$INSTALL_HIVE_IP:7077" > $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-defaults.conf
 echo "spark.driver.maxResultSize=32g" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-defaults.conf
