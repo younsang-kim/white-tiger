@@ -128,6 +128,7 @@ if [ $RETVAL -ne 0 ] ; then
 echo "ssh db start error"
 fi
 
+sleep 5
 ssh $INSTALL_USER_ID@$INSTALL_HIVE_IP "
 cd $INSTALL_HOME/apache-hive-${HIVE_VER}-bin/bin
 sh start.sh
