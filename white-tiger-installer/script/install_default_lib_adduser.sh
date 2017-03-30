@@ -119,7 +119,7 @@ do
 $INSTALL_HOME/sshpass_bin/bin/sshpass -p${ROOT_PWD} ssh -o StrictHostKeyChecking=no root@$ATTR "
 ufw disable
 apt-get update
-apt-get -y install openjdk-7-jdk
+apt-get -y install default-jdk
 apt-get -y install g++-4.8
 apt-get -y install g++
 apt-get -y install net-tools
