@@ -119,6 +119,10 @@ echo \"#!/bin/bash\" > $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/sto
 echo \". $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/postgresql_env.sh\" >> $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/stop.sh
 echo \"./pg_ctl -m immediate stop\" >> $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/stop.sh
 chmod 755 $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/start.sh $INSTALL_DB_HOME/postgresql-${POSTGRESQL_VER}-bin/bin/stop.sh
+
+cd $INSTALL_DB_HOME
+rm postgresql-${POSTGRESQL_VER}.tar
+rm -rf postgresql-${POSTGRESQL_VER}
 "
 
 RETVAL=$?
