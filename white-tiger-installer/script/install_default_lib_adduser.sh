@@ -122,6 +122,10 @@ apt-get update
 apt-get -y install openjdk-7-jdk
 apt-get -y install g++-4.8
 apt-get -y install g++
+apt-get -y install net-tools
+apt-get -y install iputils-ping
+apt-get -y install ssh
+apt-get -y install vim
 echo -e \"${INSTALL_USER_PWD}\\n${INSTALL_USER_PWD}\\n\\n\\n\\n\\n\\nY\\n\" | adduser $INSTALL_USER_ID
 "
 
