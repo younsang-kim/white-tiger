@@ -179,7 +179,7 @@ if [ $RETVAL -ne 0 ] ; then
 exit 1
 fi
 
-cd $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/lib
+cd $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/jars
 wget $POSTGRESQL_JDBC_DOWN_URL
 RETVAL=$?
 datetime=`date +'%Y-%m-%d %H:%M:%S'`
