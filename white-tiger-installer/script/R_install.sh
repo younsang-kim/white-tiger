@@ -92,6 +92,8 @@ cd $INSTALL_HOME/R-${R_VER}
 make -j 4
 make install
 cd $INSTALL_HOME
+rm R-${R_VER}.tar
+rm -rf $INSTALL_HOME/R-${R_VER}
 "
 RETVAL=$?
 

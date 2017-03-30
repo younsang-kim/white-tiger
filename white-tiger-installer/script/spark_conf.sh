@@ -61,7 +61,7 @@ done
 
 echo "#!/usr/bin/env bash" > $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export STANDALONE_SPARK_MASTER_HOST=$INSTALL_HIVE_IP" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
-echo "export SPARK_MASTER_IP=$INSTALL_HIVE_IP" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
+echo "export SPARK_MASTER_HOST=$INSTALL_HIVE_IP" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export HADOOP_CONF_DIR=$INSTALL_HOME/hadoop-${HADOOP_VER}/etc/hadoop" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export SPARK_EXECUTOR_INSTANCES=$INSTALL_SPARK_EXECUTOR_INSTANCES" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
 echo "export SPARK_EXECUTOR_CORES=$INSTALL_SPARK_EXECUTOR_CORE" >> $INSTALL_PACKAGE_BIN/spark-${SPARK_VER}-bin-hadoop2.6/conf/spark-env.sh
